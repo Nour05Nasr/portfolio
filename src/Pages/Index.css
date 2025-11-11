@@ -1,7 +1,24 @@
+:root{
+    --h1: 4vw;
+    --h2: 2.2vw;
+    --h3: 1.8vw;
+    --p: 1.5vw;
+    --font_1: 'party vibes';
+    --font_2:  'Nunito', sans-serif;;
+    --bg_color: #150633;
+    --main_color: #ffffff;
+    --primary_color: #54F1E9;
+    --secondry_color: #4557C8;
+    --accent_color: #FB8B8F;
+  }
 body{
     margin: 0;
     padding: 0;
     background-color: #150633;
+}
+.nav{
+    background-color: rgba(176, 176, 176, 0.4);
+    backdrop-filter: blur(25px);
 }
 .nav-logo {
   width: 70px;
@@ -38,7 +55,7 @@ body{
     /* background-color: grey; */
 }
 .hero_temp{
-    margin-top: 6%;
+    /* margin-top: 2%; */
     padding: 6%;
     width: 50%;
     display: flex;
@@ -83,7 +100,7 @@ body{
 .cta_temp_1{  
     /* width: 44vw; */
     /* height: 10vh; */
-    padding: 1.5% 4%;
+    padding: 1% 4%;
     border-radius: 40px;
     border: 3px solid rgba(176, 176, 176, 0.20);
     background: rgba(176, 176, 176, 0.20);
@@ -109,7 +126,7 @@ body{
 .cta_bg{
     /* width: 40vw;
     height: 8vh; */
-    padding: 1.5vw 6vw;
+    padding: 1.5vw 10vw;
     border-radius: 50px;
     background: linear-gradient(90deg, rgba(84, 241, 233, 0.6) 4%, rgba(69, 87, 200, 0.9) 80%);
     filter: blur(20px);
