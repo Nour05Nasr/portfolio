@@ -1,6 +1,7 @@
- import React from 'react';
- import { BrowserRouter, Routes, Route } from 'react-router-dom';
- import Index from '../Pages/Index';
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Index from './Pages/Index';
+import Error404 from './Pages/Error404';
 
 const RoutingApp = () => {
     return (
