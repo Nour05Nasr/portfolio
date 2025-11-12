@@ -49,12 +49,15 @@
   width: 100%;
   max-width: 900px;          /* Prevent too wide spreading */
   position: relative;
-  z-index: 3;
+  z-index: 9;
+  /* position: sticky; */
+  /* position: fixed; */
   color: white;
+    background-color: rgba(176, 176, 176, 0.4);
+    backdrop-filter: blur(25px);
   text-shadow: 0 1px 1px hsl(205deg 30% 10% / 0.2);
   text-align: center;        /* Centers text within each li */
 }
-
 
 .gooey-nav-container nav ul li {
   border-radius: 100vw;
@@ -261,3 +264,4 @@
     opacity: 0;
   }
 }
+

@@ -1,0 +1,5 @@
+.p2_temp{
+    font-family: var(--font_2);
+    font-size: var(--p);
+    color: var(--main_color);
+}
