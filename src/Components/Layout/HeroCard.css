@@ -1,6 +1,7 @@
 .hero{
-    margin-top: -70%;
-    width: 100%;
+    margin-top: -164%;
+    /* margin-top: -70%; */
+    /* width: 100%; */
     height: 100vh;
     display: flex;
     align-items: center;
@@ -11,24 +12,20 @@
 }
 
 .hero_temp{
-    padding: 5%;
-    width: 50%;
+    padding: 5% 4%;
+    width: 62%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     border-radius: 6%;
+    gap: 4vh;
     /* background-color: rgb(206, 206, 206); */
     border-radius: 40px;
     background: rgba(176, 176, 176, 0.25);
     backdrop-filter: blur(40px);
 }
 .hero_temp:hover{
-    padding: 5.5%;
+    /* padding: 6% 5%; */
     /* border: 6px solid linear-gradient(0deg, #54F1E9 4.13%, #cd420c 80.23%); */
-}
-
-.vid{
-      width: 100%;
-      mix-blend-mode: plus-lighter;
 }

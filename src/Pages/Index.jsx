@@ -5,8 +5,9 @@ import BubbleMenu from './../Components/Layout/BubbleMenu';
 import GooeyNav from './../Components/Layout/GooeyNav';
 import logo from '../Assets/logo.svg';
 import hero from './../Assets/hero.mp4';
-import portfolio from './../Assets/portfolio.png';
-import me2 from './../Assets/me2.jpg';
+import portfolio from './../Assets/portfolio.svg';
+import me3 from './../Assets/me3.png';
+import me4 from './../Assets/me4.png';
 import HeroCard from './../Components/Layout/HeroCard';
 import Button from './../Components/Common/Button';
 import H1 from './../Components/Common/H1';
@@ -16,6 +17,14 @@ import SpotlightCard from './../Components/Layout/SpotlightCard';
 import ScrollStack, { ScrollStackItem } from './../Components/Layout/ScrollStack'
 import CardSwap, { Card } from './../Components/Layout/CardSwap'
 import showreel from './../Assets/showreel.mp4';
+import LogoLoop from './../Components/Layout/LogoLoop';
+import FigmaLogo from './../Assets/FigmaLogo.png';
+import VSCLogo from './../Assets/VSCLogo.png';
+import AELogo from './../Assets/AELogo.png';
+import AILogo from './../Assets/AILogo.png';
+import PSLogo from './../Assets/PSLogo.png';
+import { SiReact, SiNextdotjs, SiTypescript, SiTailwindcss } from 'react-icons/si';
+
 import './Index.css';
 
 const items = [
@@ -24,6 +33,21 @@ const items = [
   { label: <img src={logo} alt="Logo" className="nav-logo" />, href: "#" },
   { label: "My Portfolio", href: "#" },
   { label: "Contact Me", href: "#" },
+];
+
+// const techLogos = [
+//   { node: <SiReact />, title: "React", href: "https://react.dev" },
+//   { node: <SiNextdotjs />, title: "Next.js", href: "https://nextjs.org" },
+//   { node: <SiTypescript />, title: "TypeScript", href: "https://www.typescriptlang.org" },
+//   { node: <SiTailwindcss />, title: "Tailwind CSS", href: "https://tailwindcss.com" },
+// ];
+
+const techLogos = [
+  { src: FigmaLogo, alt: "Figma", href: "#" },
+  { src: VSCLogo, alt: "VSC", href: "#" },
+  { src: AELogo, alt: "AE", href: "#" },
+  { src: AILogo, alt: "AI", href: "#" },
+  { src: PSLogo, alt: "AI", href: "#" },
 ];
 
   const  Index= () => {
@@ -47,14 +71,14 @@ const items = [
     colors={[1, 2, 3, 1, 2, 3, 1, 4]}
   />
       {/* <SpotlightCard className="custom-spotlight-card" spotlightColor="rgba(0, 229, 255, 0.2)">
- TESTTTTTTTTTTTTTTT
-</SpotlightCard> */}
+        TESTTTTTTTTTTTTTTT
+      </SpotlightCard> */}
       <HeroCard />
       <video className="vid" autostart autoPlay loop src={hero}></video>
 
         <img class="port_temp" src={portfolio} alt="portfolio" />
-        <img class="me_temp" src={me2} alt="self portrait" />
-        <section class="section_temp1 top_temp">
+        <img class="me_temp" src={me4} alt="self portrait" />
+        <section class="section_temp1">
             <div class="div_temp">
                 <H1 title='About Me'/>
                 <P title='Welcome there, you have landed on my creative heaven. I’m a UI/UX Designer, Art Director, Graphic Designer and Front-End Developer. As a UI/UX designer I help to make your ideas come to life into an impactful visual identity, and user-friendly experiences. From branding walking through UI/UX Design to front-end development. I the between creativity and functionality. With experience in branding, UI/UX Design, and digital product design, I make designs that do not only look great but also make a real impact.'/>
@@ -99,15 +123,32 @@ const items = [
   </CardSwap>
 </div> */}
 
-  <section class="section2_temp top_temp2">
+  <section class="section2_temp">
              <H1 title='My Showreel'/>
-             <video class="img_temp top_temp2" controls src={showreel}></video>
+             <video class="img_temp" controls src={showreel}></video>
   </section>
 
          <div class="section_temp0 top_temp2">
              {/* <H1 title='"I design & develop experiences that make people lives better"'/> */}
              <h1 class="h1_temp q_h2"><span class="q_h1">“</span> I design & develop experiences that make people lives better <span class="q_h1">”</span></h1>
          </div>
+
+  <section class="section2_temp top_temp2">
+             <H1 title='My Tool Kit'/>
+    <div className='' style={{ height: '200px', position: 'relative', overflow: 'hidden'}}>
+      {/* Basic horizontal loop */}
+      <LogoLoop
+        logos={techLogos}
+        speed={120}
+        direction="left"
+        logoHeight={48}
+        gap={40}
+        hoverSpeed={0}
+        scaleOnHover
+      />
+    </div>
+  </section>
+
 
 </div>
      );
