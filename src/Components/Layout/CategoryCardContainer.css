@@ -1,0 +1,22 @@
+.cards-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  position: relative;
+  transition: all 0.5s ease;
+}
+
+/* When hovering a card, dim/hide others */
+.cards-container:hover .card-wrapper {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: all 0.4s ease;
+}
+
+/* Keep hovered card visible */
+.cards-container .card-wrapper:hover {
+  opacity: 1 !important;
+  transform: scale(1.05);
+  z-index: 2;
+}

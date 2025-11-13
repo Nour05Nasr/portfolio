@@ -1,0 +1,29 @@
+.div_temp2_flip{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+    /* gap: 3vh; */
+    margin-left: 4%;
+    transform: scaleX(-1);
+    /* background-color: #54F1E9; */
+}
+
+.cta_div_flip{
+    width: 44vw;
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: scaleX(-1);
+    /* background-color: #8bfbd0; */
+}
+
+.card_flip{
+    transform: scaleX(-1);
+    /* position: absolute;
+    z-index: 3;
+    margin-top: 400%; */
+}

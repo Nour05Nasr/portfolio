@@ -1,0 +1,7 @@
+
+.h2_temp2{
+  font-family: var(--font_2);
+    font-size: var(--h2);
+    font-weight: bold;
+    color: var(--main_color);
+}

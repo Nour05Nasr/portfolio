@@ -23,9 +23,12 @@ import VSCLogo from './../Assets/VSCLogo.png';
 import AELogo from './../Assets/AELogo.png';
 import AILogo from './../Assets/AILogo.png';
 import PSLogo from './../Assets/PSLogo.png';
+import CategoryCard from './../Components/Layout/CategoryCard'
+import CategoryCardFlip from './../Components/Layout/CategoryCardFlip'
 import { SiReact, SiNextdotjs, SiTypescript, SiTailwindcss } from 'react-icons/si';
-
+import CategoryCardContainer from "./../Components/Layout/CategoryCardContainer";
 import './Index.css';
+
 
 const items = [
   { label: "About Me", href: "#" },
@@ -73,9 +76,12 @@ const techLogos = [
       {/* <SpotlightCard className="custom-spotlight-card" spotlightColor="rgba(0, 229, 255, 0.2)">
         TESTTTTTTTTTTTTTTT
       </SpotlightCard> */}
+      <section className='relative'>
       <HeroCard />
       <video className="vid" autostart autoPlay loop src={hero}></video>
+      </section>
 
+<section className='relative'>
         <img class="port_temp" src={portfolio} alt="portfolio" />
         <img class="me_temp" src={me4} alt="self portrait" />
         <section class="section_temp1">
@@ -85,8 +91,10 @@ const techLogos = [
                 <Button title='Let’s build your next project'/>
             </div>
         </section>
+</section>
 
-{/* <ScrollStack>
+{/* <div className='stack_card_div'>
+<ScrollStack>
   <ScrollStackItem>
     <h2>Card 1</h2>
     <p>This is the first card in the stack</p>
@@ -99,7 +107,8 @@ const techLogos = [
     <h2>Card 3</h2>
     <p>This is the third card in the stack</p>
   </ScrollStackItem>
-</ScrollStack> */}
+</ScrollStack>
+</div> */}
 
 {/* <div style={{ height: '100vh', position: 'relative' }}>
   <CardSwap
@@ -123,9 +132,32 @@ const techLogos = [
   </CardSwap>
 </div> */}
 
-  <section class="section2_temp">
+        {/* <section class="section2_temp cards-container top_temp2">
+            <h2 class="h1_temp h2_2">What I can offer ?</h2>
+            <Link to="/AboutMe"><CategoryCard /></Link>
+            <Link to="/AboutMe"><CategoryCardFlip /></Link>
+            <Link to="/AboutMe"><CategoryCard /></Link>
+            <Link to="/AboutMe"><CategoryCardFlip /></Link>
+            <Link to="/AboutMe"><CategoryCard /></Link>
+        </section> */}
+<section className='top_temp2 relative'>
+            <h1 className='cards_h'>What I can offer ?</h1>
+        <section class="section2_temp top_temp relative ">
+            <CategoryCard />
+            <CategoryCardFlip />
+            <CategoryCard />
+            <CategoryCardFlip />
+            <CategoryCard />
+        </section>
+</section>
+
+    {/* <div className="App">
+      <CategoryCardContainer />
+    </div> */}
+
+  <section class="section2_temp top_temp2">
              <H1 title='My Showreel'/>
-             <video class="img_temp" controls src={showreel}></video>
+             <video class="img_temp top_temp2" controls src={showreel}></video>
   </section>
 
          <div class="section_temp0 top_temp2">
@@ -148,6 +180,7 @@ const techLogos = [
       />
     </div>
   </section>
+
 
 
 </div>

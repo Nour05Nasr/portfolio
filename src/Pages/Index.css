@@ -60,20 +60,20 @@ body{
   float: right;
   position: absolute;
   /* z-index: 2; */
-  margin: -30% 0 0 0;
+  margin: -7.5% 0 0 0;
   /* padding: 60% 0 0 50%; */
   /* padding: 0% 0 0 50%; */
   /* background-color: #54F1E9; */
 }
 
 .section_temp1{
-    /* width: 100%; */
+    width: 100%;
     height: 120vh;
     display: flex;
     align-items: center;
     /* justify-content: center; */
     gap: 4%;
-    margin: -7% 0 0 0;
+    margin: -2% 0 0 0;
     background-image: url(./../Assets/portfolio_bg.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -106,13 +106,33 @@ body{
     /* background-color: #FB8B8F; */
 }
 
+.container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+    /* background-color: #FB8B8F; */
+}
+
 .section_temp0{
-    /* width: 100%; */
+    width: 100%;
     /* height: 120vh; */
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 2%;
+    /* backdrop-filter: blur(20px); */
+    /* background-color: #FB8B8F; */
+}
+
+.section_temp{
+    width: 100%;
+    /* height: 120vh; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 22%;
     /* backdrop-filter: blur(20px); */
     /* background-color: #FB8B8F; */
 }
@@ -130,4 +150,35 @@ body{
 .q_h2{
   width: 50%;
   margin: 0;
+}
+
+/* .stack_card_div{
+    
+} */
+
+.h2_2{
+  width: 90%;
+  text-align: right;
+  margin-top: -84%;
+  padding: 0 10% 0 0;
+  position: absolute;
+  z-index: 1;
+}
+
+.relative{
+    position: relative;
+}
+
+.cards_h{
+    width: 94%;
+    font-family: var(--font_1);
+    font-size: var(--h1);
+    text-align: right;
+    font-weight: bold;
+    background-color: rgb(255, 255, 255); 
+    color: transparent;
+    background-clip: text;
+    text-shadow: 
+    2px -2px 4px rgba(255, 255, 255, 0.6),
+    2px 2px 4px rgba(0, 0, 0, 0.35);
 }
