@@ -31,17 +31,17 @@ import './ProjectDetails.css';
 const ProjectDetails = (props) => {
     let projects ={
         project1:{
-            title: "UI/UX Design & Prototyping",
+            title: "ARTMENTO App",
             content: "This is the content for category 1",
             projimg: {project1},
         },
         project2:{
-            title: "Graphic Design & Brand Identity",
+            title: "AR Escape Room Web",
             content: "This is the content for category 2",
             projimg: {project2},
         },
         project3:{
-            title: "Web Design & Front-End",
+            title: "ITN TV OS",
             content: "This is the content for category 3",
             projimg: {project3},
         }
@@ -49,6 +49,7 @@ const ProjectDetails = (props) => {
 
       const { id } = useParams();
       console.log(id);
+    //   console.log(projects[project1].title);
 
     return ( 
                   <div style={{

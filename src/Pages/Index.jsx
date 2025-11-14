@@ -147,9 +147,9 @@ const techLogos = [
         <section class="section2_temp top_temp relative">
             <CategoryCard title="UI/UX Design & Prototyping" url="/Category/UI_UX_Design"/>
             <CategoryCardFlip title='Graphic Design & Brand Identity' />
-            <CategoryCard title="Graphic Design" url="/Category/Web_Design"/>
-            <CategoryCardFlip title="Graphic Design" url="/Category/Motion_Graphics" />
-            <CategoryCard title="Graphic Design" url="/Category/Art_Direction" />
+            <CategoryCard title="Web Design & & Front-End" url="/Category/Web_Design"/>
+            <CategoryCardFlip title="Motion Graphics" url="/Category/Motion_Graphics" />
+            <CategoryCard title="Art Direction" url="/Category/Art_Direction" />
         </section>
 </section>
 

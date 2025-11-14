@@ -26,7 +26,7 @@ import './Category.css';
 
 const Category = () => {
     let categories ={
-        category2:{
+        category1:{
             title: "UI/UX Design & Prototyping",
             content: "This is the content for category 1",
             heroimg: {ui_ux2},
@@ -55,6 +55,7 @@ const Category = () => {
 
   const { id } = useParams();
   console.log(id);
+//   console.log(categories[category1].title);
 
     return ( 
           <div style={{
