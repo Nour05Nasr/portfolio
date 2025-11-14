@@ -17,7 +17,7 @@ const CategoryCardFlip = (props) => {
                     <P title='Logos, visual systems, social media templates, and digital assets and full branding strategies' />
                 </div>
                <div className='cta_div_flip top_temp'>
-                    {/* <Link to="/Category/Graphic_Design"><Button title='View All Projects' /></Link> */}
+                    <Link to={props.url}><Button title='View All Projects' /></Link>
                   {/* <Button title='View All Projects'/> */}
                 </div>
             </div>

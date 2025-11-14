@@ -79,7 +79,7 @@ const techLogos = [
         TESTTTTTTTTTTTTTTT
       </SpotlightCard> */}
       <section className='relative section2_temp'>
-      <HeroCard />
+      <HeroCard title='our Nasr UI/UX Designer & Creative Art Director' />
       <video className="vid" autostart autoPlay loop src={hero}></video>
       </section>
 
@@ -147,9 +147,9 @@ const techLogos = [
         <section class="section2_temp top_temp relative">
             <CategoryCard title="UI/UX Design & Prototyping" url="/Category/UI_UX_Design"/>
             <CategoryCardFlip title='Graphic Design & Brand Identity' />
-            <CategoryCard title="Graphic Design" url="/Category/Graphic_Design"/>
-            <CategoryCardFlip title="Graphic Design" url="/Category/Graphic_Design" />
-            <CategoryCard title="Graphic Design" url="/Category/Graphic_Design" />
+            <CategoryCard title="Graphic Design" url="/Category/Web_Design"/>
+            <CategoryCardFlip title="Graphic Design" url="/Category/Motion_Graphics" />
+            <CategoryCard title="Graphic Design" url="/Category/Art_Direction" />
         </section>
 </section>
 

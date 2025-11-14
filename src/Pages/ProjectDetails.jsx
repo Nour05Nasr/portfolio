@@ -18,9 +18,8 @@ import './ProjectDetails.css';
   { label: "Contact Me", href: "#" },
 ];
 
+
 const ProjectDetails = () => {
-  const { id } = useParams();
-  console.log(id);
 
     return ( 
                   <div style={{
