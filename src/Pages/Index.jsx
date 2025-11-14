@@ -12,10 +12,11 @@ import HeroCard from './../Components/Layout/HeroCard';
 import Button from './../Components/Common/Button';
 import H1 from './../Components/Common/H1';
 import H2 from './../Components/Common/H2';
+import H3 from './../Components/Common/H3';
 import P from './../Components/Common/P';
 import SpotlightCard from './../Components/Layout/SpotlightCard';
-import ScrollStack, { ScrollStackItem } from './../Components/Layout/ScrollStack'
-import CardSwap, { Card } from './../Components/Layout/CardSwap'
+import ScrollStack, { ScrollStackItem } from './../Components/Layout/ScrollStack';
+import CardSwap, { Card } from './../Components/Layout/CardSwap';
 import showreel from './../Assets/showreel.mp4';
 import LogoLoop from './../Components/Layout/LogoLoop';
 import FigmaLogo from './../Assets/FigmaLogo.png';
@@ -23,12 +24,13 @@ import VSCLogo from './../Assets/VSCLogo.png';
 import AELogo from './../Assets/AELogo.png';
 import AILogo from './../Assets/AILogo.png';
 import PSLogo from './../Assets/PSLogo.png';
-import CategoryCard from './../Components/Layout/CategoryCard'
-import CategoryCardFlip from './../Components/Layout/CategoryCardFlip'
+import CategoryCard from './../Components/Layout/CategoryCard';
+import CategoryCardFlip from './../Components/Layout/CategoryCardFlip';
+import Input from '../Components/Common/Input'
 import { SiReact, SiNextdotjs, SiTypescript, SiTailwindcss } from 'react-icons/si';
 import CategoryCardContainer from "./../Components/Layout/CategoryCardContainer";
+import Footer from '../Components/Layout/Footer';
 import './Index.css';
-
 
 const items = [
   { label: "About Me", href: "#" },
@@ -76,7 +78,7 @@ const techLogos = [
       {/* <SpotlightCard className="custom-spotlight-card" spotlightColor="rgba(0, 229, 255, 0.2)">
         TESTTTTTTTTTTTTTTT
       </SpotlightCard> */}
-      <section className='relative'>
+      <section className='relative section2_temp'>
       <HeroCard />
       <video className="vid" autostart autoPlay loop src={hero}></video>
       </section>
@@ -134,20 +136,20 @@ const techLogos = [
 
         {/* <section class="section2_temp cards-container top_temp2">
             <h2 class="h1_temp h2_2">What I can offer ?</h2>
-            <Link to="/AboutMe"><CategoryCard /></Link>
-            <Link to="/AboutMe"><CategoryCardFlip /></Link>
+            <Link to="//Category/UI_UX_Design"><CategoryCard title='UI/UX Design & Prototyping'/></Link>
+            <Link to="/Category/Graphic_Design"><CategoryCardFlip /></Link>
             <Link to="/AboutMe"><CategoryCard /></Link>
             <Link to="/AboutMe"><CategoryCardFlip /></Link>
             <Link to="/AboutMe"><CategoryCard /></Link>
         </section> */}
 <section className='top_temp2 relative'>
             <h1 className='cards_h'>What I can offer ?</h1>
-        <section class="section2_temp top_temp relative ">
-            <CategoryCard />
-            <CategoryCardFlip />
-            <CategoryCard />
-            <CategoryCardFlip />
-            <CategoryCard />
+        <section class="section2_temp top_temp relative">
+            <CategoryCard title="UI/UX Design & Prototyping" url="/Category/UI_UX_Design"/>
+            <CategoryCardFlip title='Graphic Design & Brand Identity' />
+            <CategoryCard title="Graphic Design" url="/Category/Graphic_Design"/>
+            <CategoryCardFlip title="Graphic Design" url="/Category/Graphic_Design" />
+            <CategoryCard title="Graphic Design" url="/Category/Graphic_Design" />
         </section>
 </section>
 
@@ -167,7 +169,7 @@ const techLogos = [
 
   <section class="section2_temp top_temp2">
              <H1 title='My Tool Kit'/>
-    <div className='' style={{ height: '200px', position: 'relative', overflow: 'hidden'}}>
+    <div className='top_temp2' style={{ height: '200px', position: 'relative', overflow: 'hidden'}}>
       {/* Basic horizontal loop */}
       <LogoLoop
         logos={techLogos}
@@ -181,7 +183,7 @@ const techLogos = [
     </div>
   </section>
 
-
+  <Footer />
 
 </div>
      );

@@ -1,0 +1,187 @@
+.connect_temp{
+  width: 96%;
+  /* height: 6vh; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2%;
+  border-radius: 4%;
+border-radius: 11000px 11000px 0 0;  
+background: rgba(155, 155, 155, 0.25);
+backdrop-filter: blur(80px);
+}
+
+.footer_row{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6%;
+    /* background-color: aqua; */
+  }
+.footer-section {
+  padding: 0 2% 0;
+  background: var(--primary-color);
+  position: relative;
+}
+.footer_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    align-items: right;
+}
+.footer-cta {
+  border-bottom: 1px solid var(--primary-color);
+}
+.single-cta i {
+  font-family: var(--font_2);
+  color: var(--background-color);
+  font-size: 30px;
+  float: left;
+  margin-top: 8px;
+}
+.cta-text {
+  padding-left: 15px;
+  display: inline-block;
+}
+.cta-text h4 {
+  font-family: var(--font_2);
+  color: var(--background-color);
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+.cta-text span {
+  color: #757575;
+  font-size: 15px;
+}
+.footer-content {
+  position: relative;
+  z-index: 2;
+}
+.footer-pattern img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 330px;
+  background-size: cover;
+  background-position: 100% 100%;
+}
+.footer-logo img {
+    max-width: 80px;
+    float: right;
+}
+.footer_top{
+    margin-top: 2%;
+}
+.footer-text p {
+  margin-bottom: 14px;
+  font-size: 14px;
+  color: #7e7e7e;
+  line-height: 28px;
+}
+.footer-social-icon span {
+  color: var(--background-color);
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: var(--font_2);
+  margin-bottom: 20px;
+}
+.footer-social-icon a {
+  color: var(--background-color);
+  font-size: 16px;
+  margin-right: 15px;
+}
+.footer-social-icon i {
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  line-height: 38px;
+  border-radius: 50%;
+}
+.footer-widget-heading h3 {
+  color: var(--main_color);
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  position: relative;
+}
+.footer-widget-heading h3::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -15px;
+  height: 2px;
+  width: 50px;
+  background: var(--primary-color);
+}
+.footer-widget ul li {
+  display: inline-block;
+  float: left;
+  width: 50%;
+  margin-bottom: 12px;
+}
+.footer-widget ul li a:hover{
+  color: var(--background-color);
+}
+.footer-widget ul li a {
+  color: #878787;
+  text-transform: capitalize;
+}
+.subscribe-form {
+  position: relative;
+  overflow: hidden;
+}
+.subscribe-form input {
+  width: 100%;
+  padding: 14px 28px;
+  background: #F0F0F0;
+  border: 1px solid #F0F0F0;
+  color: var(--primary-color);
+}
+.subscribe-form button {
+    position: absolute;
+    right: 0;
+    background: var(--secondry-color);
+    padding:22px 24px;
+    border: 1px solid var(--secondry-color);
+    top: 0;
+}
+.subscribe-form button i {
+  color: var(--primary-color);
+  font-size: 22px;
+  transform: rotate(-6deg);
+}
+.copyright-area{
+  background: var(--primary-color);
+  padding: 25px 0;
+}
+.copyright-text p {
+  margin: 0;
+  font-family: var(--font_2);
+  font-size: 14px;
+  color: #878787;
+}
+.copyright-text p a{
+  color: var(--background-color);
+}
+.footer-menu li {
+  display: inline-block;
+  margin-left: 20px;
+}
+.footer-menu li:hover a{
+  color: var(--background-color);
+}
+.footer-menu li a {
+  font-family: var(--font_2);
+  font-size: 14px;
+  color: #878787;
+}
+.footer_h{
+  margin: 0;
+  font-family: var(--font_2);
+  font-size: 2vw;
+  color: var(--main_color);
+}

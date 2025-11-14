@@ -16,6 +16,9 @@ body{
     margin: 0;
     padding: 0;
     background-color: #150633;
+    background-image: url(./../Assets/bodybg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .nav{
     position: fixed;
@@ -36,13 +39,13 @@ body{
   transform: scale(1.05);
 }
 
-.none{
+/* .none{
   text-decoration: none;
    color: var(--main_color);
     font-family: var(--font_2);
     font-size: var(--p);
     font-weight: bold;
-}
+} */
 
 .vid{
       width: 100%;
@@ -182,3 +185,5 @@ body{
     2px -2px 4px rgba(255, 255, 255, 0.6),
     2px 2px 4px rgba(0, 0, 0, 0.35);
 }
+
+

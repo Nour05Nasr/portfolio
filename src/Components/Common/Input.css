@@ -1,0 +1,13 @@
+.input{
+    /* width: 200px; */
+    /* height: 60px; */
+    padding: 0.5% 0 0.5% 1%;
+    font-family: var(--font_2);
+    font-size: 16px;
+    color: #fff;
+    border-radius: 14px;
+    border: 2px solid var(--main_color);
+    /* background-color: #fff; */
+}
+
+
