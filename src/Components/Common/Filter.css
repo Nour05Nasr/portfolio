@@ -1,0 +1,9 @@
+.filter{
+   display: flex;
+   padding: 1% 2%;
+   justify-content: center;
+   align-items: center;
+   gap: 10px;
+   border-radius: 40px;
+   background: rgba(155, 155, 155, 0.25);
+}

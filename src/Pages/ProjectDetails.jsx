@@ -7,7 +7,16 @@ import Button from './../Components/Common/Button';
 import H1 from './../Components/Common/H1';
 import P from './../Components/Common/P';
 import project1 from "./../Assets/project1.png"
-import project_overview from './../Assets/project_overview.svg';
+import project2 from './../Assets/project2.png';
+import project3 from './../Assets/project3.png';
+import process from "./../Assets/process.png";
+import figma from './../Assets/figma.png';
+import teams from './../Assets/teams.png';
+import vsc2 from './../Assets/vsc2.png';
+import OvrCard from './../Components/Common/OvrCard';
+import Filter from '../Components/Common/Filter';
+import Image from '../Components/Common/Image';
+import Footer from '../Components/Layout/Footer';
 import './ProjectDetails.css';
 
   const items = [
@@ -19,7 +28,27 @@ import './ProjectDetails.css';
 ];
 
 
-const ProjectDetails = () => {
+const ProjectDetails = (props) => {
+    let projects ={
+        project1:{
+            title: "UI/UX Design & Prototyping",
+            content: "This is the content for category 1",
+            projimg: {project1},
+        },
+        project2:{
+            title: "Graphic Design & Brand Identity",
+            content: "This is the content for category 2",
+            projimg: {project2},
+        },
+        project3:{
+            title: "Web Design & Front-End",
+            content: "This is the content for category 3",
+            projimg: {project3},
+        }
+    }
+
+      const { id } = useParams();
+      console.log(id);
 
     return ( 
                   <div style={{
@@ -41,13 +70,40 @@ const ProjectDetails = () => {
     colors={[1, 2, 3, 1, 2, 3, 1, 4]}
   />
 
-        <section>
-            <img src={project1} alt="" />
-            <div className='overview_card'>
-              <H1 title='ARTMENTO App Overview' />
-              <P title='Led the creative direction and participated in the design of a 6 members group project aimed at mentoring and guiding artists through the AI art mentor App with interactive design emphasizing on teamwork, Multidisciplinary and balancing creativity with technical execution.' />
-            </div>
+            {/* <Image img={project1} alt="project" /> */}
+            <img className='proj_img' src={project1} alt="project1" />
+      <OvrCard 
+      project='Project Overview' 
+      desc='Led the creative direction and participated in the design of a 6 members group project aimed at mentoring and guiding artists through the AI art mentor App with interactive design emphasizing on teamwork, Multidisciplinary and balancing creativity with technical execution.' />
+
+        <section className='relative section2_temp'>
+
+            <section className='section_temp0'>
+            <div className='section2_temp'>
+              <H1 title='Categories' />
+                <div className='section_temp0'>
+                    <Filter title='UI/UX Design'/>
+                    <Filter title='Art Direction'/>
+                </div>
+              </div>
+
+            <div className='section2_temp'>
+              <H1 title='Tools Used' />
+                <div className='section_temp0'>
+                 <img src={figma} />
+                 <img src={teams} />
+                 <img src={vsc2} />
+                </div>
+              </div>
+            </section>
+
+      <OvrCard
+      project='Design Process' 
+      desc='Led the creative direction and participated in the design of a 6 members group project aimed at mentoring and guiding artists through the AI art mentor App with interactive design emphasizing on teamwork, Multidisciplinary and balancing creativity with technical execution.' />
+               <img className='proj_img' src={process} alt="project1" />
         </section>
+
+          <Footer />
 </div>
      );
 }

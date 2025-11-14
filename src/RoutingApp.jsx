@@ -16,7 +16,7 @@ const RoutingApp = () => {
         {/* <Route path="/Category" element={<Category />} />
         <Route path="/ProjectDeails" element={<ProjectDetails />} /> */}
         <Route path="/Category/:id" element={<Category />} />
-        <Route path="/ProjectDeails/:id" element={<ProjectDetails />} />
+        <Route path="/ProjectDetails/:id" element={<ProjectDetails />} />
 
         <Route path="*" element={<Error404 />} />
     </Routes>

@@ -12,6 +12,8 @@ import project1 from "./../Assets/project1.png"
 import project2 from './../Assets/project2.png';
 import project3 from './../Assets/project3.png';
 import ProjectCard from './../Components/Layout/ProjectCard';
+import Filter from '../Components/Common/Filter';
+import Footer from '../Components/Layout/Footer';
 import './Category.css';
 
  const items = [
@@ -79,20 +81,32 @@ const Category = () => {
       <img className="vid" src={ui_ux2}></img>
       </section>
 
+            <div className='section2_temp'>
+              <H1 title='Filter Projects' />
+                <div className='section_temp0'>
+                    <Filter title='App'/>
+                    <Filter title='Web'/>
+                    <Filter title='OS'/>
+                </div>
+            </div>
+
       <ProjectCard 
       project='ARTMENTO App' 
-      img={project1} desc='Led the creative direction and participated in the design of a 6 members group project aimed at mentoring and guiding artists through the AI art mentor App with interactive design emphasizing on teamwork, Multidisciplinary and balancing creativity with technical execution.' 
+      img={project1} 
+      desc='Led the creative direction and participated in the design of a 6 members group project aimed at mentoring and guiding artists through the AI art mentor App with interactive design emphasizing on teamwork, Multidisciplinary and balancing creativity with technical execution.' 
       url='/ProjectDetails/AI_Art_Mentor_APP' />
       <ProjectCard 
       project='AR Escape Room Web' 
       img={project2} 
       desc='Led the design and creative direction of a 3-phase AR Escape room group project aimed at merging immersive storytelling with interactive design emphasizing on teamwork, Multidisciplinary and balancing creativity with technical execution.'
-       url='/ProjectDetails/AR_Escape_Room_Web' />
+      url='/ProjectDetails/AR_Escape_Room_Web' />
       <ProjectCard 
       project='ITN TV OS' 
       img={project3} 
       desc='I designed the ITN Tv Os logo and prototype with the aim to create a user-friendly, visually cohesive, and feature-rich smart TV interface and brand identity while providing an optimal user experience.  The final product integrates interactive features, and modern design ensuring an engaging and intuitive experience for users of all proficiency levels. ' 
       url='/ProjectDetails/ITN_TV_OS' />
+
+        <Footer />
 </div>
      );
 }
