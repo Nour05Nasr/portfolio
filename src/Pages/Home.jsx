@@ -1,43 +1,44 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
-import PillNav from './../Components/Layout/PillNav';
-import BubbleMenu from './../Components/Layout/BubbleMenu';
-import GooeyNav from './../Components/Layout/GooeyNav';
+import PillNav from '../Components/Layout/PillNav';
+import BubbleMenu from '../Components/Layout/BubbleMenu';
+import GooeyNav from '../Components/Layout/GooeyNav';
 import logo from '../Assets/logo.svg';
 import hero from './../Assets/hero.mp4';
 import portfolio from './../Assets/portfolio.svg';
 import me3 from './../Assets/me3.png';
 import me4 from './../Assets/me4.png';
-import HeroCard from './../Components/Layout/HeroCard';
-import Button from './../Components/Common/Button';
-import H1 from './../Components/Common/H1';
-import H2 from './../Components/Common/H2';
-import H3 from './../Components/Common/H3';
-import P from './../Components/Common/P';
-import SpotlightCard from './../Components/Layout/SpotlightCard';
-import ScrollStack, { ScrollStackItem } from './../Components/Layout/ScrollStack';
-import CardSwap, { Card } from './../Components/Layout/CardSwap';
+import HeroCard from '../Components/Layout/HeroCard';
+import Button from '../Components/Common/Button';
+import H1 from '../Components/Common/H1';
+import H2 from '../Components/Common/H2';
+import H3 from '../Components/Common/H3';
+import P from '../Components/Common/P';
+import SpotlightCard from '../Components/Layout/SpotlightCard';
+import ScrollStack, { ScrollStackItem } from '../Components/Layout/ScrollStack';
+import CardSwap, { Card } from '../Components/Layout/CardSwap';
 import showreel from './../Assets/showreel.mp4';
-import LogoLoop from './../Components/Layout/LogoLoop';
+import LogoLoop from '../Components/Layout/LogoLoop';
 import FigmaLogo from './../Assets/FigmaLogo.png';
 import VSCLogo from './../Assets/VSCLogo.png';
 import AELogo from './../Assets/AELogo.png';
 import AILogo from './../Assets/AILogo.png';
 import PSLogo from './../Assets/PSLogo.png';
-import CategoryCard from './../Components/Layout/CategoryCard';
-import CategoryCardFlip from './../Components/Layout/CategoryCardFlip';
+import CategoryCard from '../Components/Layout/CategoryCard';
+import CategoryCardFlip from '../Components/Layout/CategoryCardFlip';
 import Input from '../Components/Common/Input'
 import { SiReact, SiNextdotjs, SiTypescript, SiTailwindcss } from 'react-icons/si';
-import CategoryCardContainer from "./../Components/Layout/CategoryCardContainer";
+import CategoryCardContainer from "../Components/Layout/CategoryCardContainer";
 import Footer from '../Components/Layout/Footer';
-import './Index.css';
+import Logos from '../Components/Layout/Logos';
+import './Home.css';
 
 const items = [
-  { label: "About Me", href: "#" },
-  { label: "My Services", href: "#" },
-  { label: <img src={logo} alt="Logo" className="nav-logo" />, href: "#" },
-  { label: "My Portfolio", href: "#" },
-  { label: "Contact Me", href: "#" },
+  { label: "About Me", href: "/AboutMe" },
+  { label: "My Services", href: "/Myservices" },
+  { label: <img src={logo} alt="Logo" className="nav-logo" />, href:"/Home"},
+  { label: "My Portfolio", href: "/MyPortfolio" },
+  { label: "Contact Me", href: "/ContactMe" },
 ];
 
 // const techLogos = [
@@ -95,7 +96,7 @@ const techLogos = [
         </section>
 </section>
 
-{/* <div className='stack_card_div'>
+<div className='stack_card_div'>
 <ScrollStack>
   <ScrollStackItem>
     <h2>Card 1</h2>
@@ -110,7 +111,7 @@ const techLogos = [
     <p>This is the third card in the stack</p>
   </ScrollStackItem>
 </ScrollStack>
-</div> */}
+</div>
 
 {/* <div style={{ height: '100vh', position: 'relative' }}>
   <CardSwap
@@ -168,9 +169,10 @@ const techLogos = [
          </div>
 
   <section class="section2_temp top_temp2">
-             <H1 title='My Tool Kit'/>
-    <div className='top_temp2' style={{ height: '200px', position: 'relative', overflow: 'hidden'}}>
-      {/* Basic horizontal loop */}
+         <H1 title='My Tool Kit'/>
+         <Logos />
+    {/* <div className='top_temp2' style={{ height: '200px', position: 'relative', overflow: 'hidden'}}>
+      Basic horizontal loop
       <LogoLoop
         logos={techLogos}
         speed={120}
@@ -180,7 +182,7 @@ const techLogos = [
         hoverSpeed={0}
         scaleOnHover
       />
-    </div>
+    </div> */}
   </section>
 
   <Footer />

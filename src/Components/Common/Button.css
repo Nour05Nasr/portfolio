@@ -36,7 +36,7 @@
 .cta_bg{
     /* width: 40vw;
     height: 8vh; */
-    padding: 1.5vw 10vw;
+    padding: 1.5vw 8vw;
     border-radius: 50px;
     background: linear-gradient(90deg, rgba(84, 241, 233, 0.6) 4%, rgba(69, 87, 200, 0.9) 80%);
     filter: blur(20px);
