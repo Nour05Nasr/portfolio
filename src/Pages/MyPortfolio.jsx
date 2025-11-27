@@ -15,6 +15,7 @@ import project4 from "./../Assets/project4.png"
 import project5 from './../Assets/project5.png';
 import project6 from './../Assets/project6.png';
 import projHero from './../Assets/projHero.png';
+import showreel from './../Assets/showreel.mp4';
 import ProjectCard from './../Components/Layout/ProjectCard';
 import Filter from '../Components/Common/Filter';
 import Footer from '../Components/Layout/Footer';
@@ -83,10 +84,10 @@ const MyPortfolio = () => {
 
      <section className='relative section2_temp'>
       <HeroCard  title='Nour Nasr Creative Design Portfolio' />
-      <img className="vid" src={projHero}></img>
+      <video className="vid" autostart autoPlay loop src={showreel}></video>
       </section>
 
-            <div className='section2_temp'>
+            <div className='section2_temp top_temp2'>
               <H1 title='Filter Projects' />
                 <div className='section_temp0'>
                     <Filter title='UI/UX Design'/>
@@ -110,7 +111,7 @@ const MyPortfolio = () => {
       <ProjectCard 
       project='Best for Juice' 
       img={project4} 
-      desc='I designed the ITN Tv Os logo and prototype with the aim to create a user-friendly, visually cohesive, and feature-rich smart TV interface and brand identity while providing an optimal user experience.  The final product integrates interactive features, and modern design ensuring an engaging and intuitive experience for users of all proficiency levels. ' 
+      desc='Began this re-branding project with redesigning the logo infusing it with a vibrant essence. Then, meticulously crafting a brand manual, to evoke a dynamic and cheerful brand identity, showcasing the vibrant kids friendly essence of the brand.' 
       url='/ProjectDetails/ITN_TV_OS' />
 
         <Footer />
