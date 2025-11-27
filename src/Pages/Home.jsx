@@ -80,7 +80,7 @@ const techLogos = [
         TESTTTTTTTTTTTTTTT
       </SpotlightCard> */}
       <section className='relative section2_temp'>
-      <HeroCard title="our Nasr UI/UX Designer & Creative Art Director" url="/MyPortfolio" />
+      <HeroCard title="our Nasr UI/UX Designer & Creative Art Director" url="/AboutMe" />
       <video className="vid" autostart autoPlay loop src={hero}></video>
       </section>
 
@@ -91,7 +91,9 @@ const techLogos = [
             <div class="div_temp">
                 <H1 title='About Me'/>
                 <P title='Welcome there, you have landed on my creative heaven. I’m a UI/UX Designer, Art Director, Graphic Designer and Front-End Developer. As a UI/UX designer I help to make your ideas come to life into an impactful visual identity, and user-friendly experiences. From branding walking through UI/UX Design to front-end development. I the between creativity and functionality. With experience in branding, UI/UX Design, and digital product design, I make designs that do not only look great but also make a real impact.'/>
-                <Button title='Know More About Me' url=''/>
+                <Button title='Know More About Me' />
+                {/* <Link to="/AboutMe"><button title="Know More About Me" /></Link> */}
+                {/* <Button title='Know More About Me' url="AboutMe" /> */}
             </div>
         </section>
 </section>
