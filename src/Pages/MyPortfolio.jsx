@@ -11,17 +11,21 @@ import ui_ux2 from './../Assets/ui_ux2.png';
 import project1 from "./../Assets/project1.png"
 import project2 from './../Assets/project2.png';
 import project3 from './../Assets/project3.png';
+import project4 from "./../Assets/project4.png"
+import project5 from './../Assets/project5.png';
+import project6 from './../Assets/project6.png';
+import projHero from './../Assets/projHero.png';
 import ProjectCard from './../Components/Layout/ProjectCard';
 import Filter from '../Components/Common/Filter';
 import Footer from '../Components/Layout/Footer';
 import './MyPortfolio.css';
 
- const items = [
-  { label: "About Me", href: "#" },
-  { label: "My Services", href: "#" },
-  { label: <img src={logo} alt="Logo" className="nav-logo" />, href: "#" },
-  { label: "My Portfolio", href: "#" },
-  { label: "Contact Me", href: "#" },
+const items = [
+  { label: "About Me", href: "/AboutMe" },
+  { label: "My Services", href: "/Myservices" },
+  { label: <img src={logo} alt="Logo" className="nav-logo" />, href:"/"},
+  { label: "My Portfolio", href: "/MyPortfolio" },
+  { label: "Contact Me", href: "/ContactMe" },
 ];
 
 const MyPortfolio = () => {
@@ -78,22 +82,24 @@ const MyPortfolio = () => {
   />
 
      <section className='relative section2_temp'>
-      <HeroCard  title='Nour Nasr Creative Portfolio' />
-      <img className="vid" src={ui_ux2}></img>
+      <HeroCard  title='Nour Nasr Creative Design Portfolio' />
+      <img className="vid" src={projHero}></img>
       </section>
 
             <div className='section2_temp'>
               <H1 title='Filter Projects' />
                 <div className='section_temp0'>
-                    <Filter title='App'/>
-                    <Filter title='Web'/>
-                    <Filter title='OS'/>
+                    <Filter title='UI/UX Design'/>
+                    <Filter title='Graphic Design'/>
+                    <Filter title='Art Direction'/>
+                    <Filter title='Front-End'/>
+                    <Filter title='Motion Graphics'/>
                 </div>
             </div>
 
       <ProjectCard 
-      project='ARTMENTO App' 
-      img={project1} 
+      project='EUI Student Union' 
+      img={project6} 
       desc='Led the creative direction and participated in the design of a 6 members group project aimed at mentoring and guiding artists through the AI art mentor App with interactive design emphasizing on teamwork, Multidisciplinary and balancing creativity with technical execution.' 
       url='/ProjectDetails/AI_Art_Mentor_APP' />
       <ProjectCard 
@@ -102,8 +108,8 @@ const MyPortfolio = () => {
       desc='Led the design and creative direction of a 3-phase AR Escape room group project aimed at merging immersive storytelling with interactive design emphasizing on teamwork, Multidisciplinary and balancing creativity with technical execution.'
       url='/ProjectDetails/AR_Escape_Room_Web' />
       <ProjectCard 
-      project='ITN TV OS' 
-      img={project3} 
+      project='Best for Juice' 
+      img={project4} 
       desc='I designed the ITN Tv Os logo and prototype with the aim to create a user-friendly, visually cohesive, and feature-rich smart TV interface and brand identity while providing an optimal user experience.  The final product integrates interactive features, and modern design ensuring an engaging and intuitive experience for users of all proficiency levels. ' 
       url='/ProjectDetails/ITN_TV_OS' />
 

@@ -36,7 +36,7 @@ import './Home.css';
 const items = [
   { label: "About Me", href: "/AboutMe" },
   { label: "My Services", href: "/Myservices" },
-  { label: <img src={logo} alt="Logo" className="nav-logo" />, href:"/Home"},
+  { label: <img src={logo} alt="Logo" className="nav-logo" />, href:"/"},
   { label: "My Portfolio", href: "/MyPortfolio" },
   { label: "Contact Me", href: "/ContactMe" },
 ];
@@ -80,7 +80,7 @@ const techLogos = [
         TESTTTTTTTTTTTTTTT
       </SpotlightCard> */}
       <section className='relative section2_temp'>
-      <HeroCard title='our Nasr UI/UX Designer & Creative Art Director' />
+      <HeroCard title="our Nasr UI/UX Designer & Creative Art Director" url="/MyPortfolio" />
       <video className="vid" autostart autoPlay loop src={hero}></video>
       </section>
 
