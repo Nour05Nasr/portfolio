@@ -22,7 +22,7 @@ import AboutCard2 from '../Components/Layout/AboutCard2';
 import Logos from '../Components/Layout/Logos';
 import Footer from '../Components/Layout/Footer';
 import './AboutMe.css';
-
+//2222
 
 const items = [
   { label: "About Me", href: "/AboutMe" },
