@@ -88,6 +88,9 @@ body{
 .top_temp{
     margin-top: 10%;
 }
+.top_temp1{
+    margin-top: 20%;
+}
 
 .div_temp{
     width: 40%;
@@ -153,6 +156,9 @@ body{
 .q_h2{
   width: 50%;
   margin: 0;
+  position: absolute;
+  z-index: 2;
+  margin-top: -24%;
 }
 
 /* .stack_card_div{

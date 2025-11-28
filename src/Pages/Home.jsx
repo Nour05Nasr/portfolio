@@ -31,6 +31,8 @@ import { SiReact, SiNextdotjs, SiTypescript, SiTailwindcss } from 'react-icons/s
 import CategoryCardContainer from "../Components/Layout/CategoryCardContainer";
 import Footer from '../Components/Layout/Footer';
 import Logos from '../Components/Layout/Logos';
+import Orb from '../Components/Common/Orb';
+// import Orb from './Orb';
 import './Home.css';
 
 const items = [
@@ -164,13 +166,24 @@ const techLogos = [
              <H1 title='My Showreel'/>
              <video class="img_temp top_temp2" controls src={showreel}></video>
   </section>
+  
 
-         <div class="section_temp0 top_temp2">
-             {/* <H1 title='"I design & develop experiences that make people lives better"'/> */}
+         {/* <div class="section_temp0">
              <h1 class="h1_temp q_h2"><span class="q_h1">“</span> I design & develop experiences that make people lives better <span class="q_h1">”</span></h1>
-         </div>
+         </div> */}
+<div className='top_temp2' style={{ width: '100%', height: '600px', position: 'relative' }}>
+  <Orb
+    hoverIntensity={0.8}
+    rotateOnHover={true}
+    hue={0}
+    forceHoverState={false}
+  />
+</div>
+  <section class="section2_temp">
+          <h1 class="h1_temp q_h2"><span class="q_h1">“</span> I design & develop experiences that make people lives better <span class="q_h1">”</span></h1>
+  </section>
 
-  <section class="section2_temp top_temp2">
+  <section class="section2_temp top_temp1">
          <H1 title='My Tool Kit'/>
          <Logos />
     {/* <div className='top_temp2' style={{ height: '200px', position: 'relative', overflow: 'hidden'}}>
