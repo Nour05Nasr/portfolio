@@ -1,20 +1,3 @@
-.card_temp2{
-    width: 100%;
-    height: 39vh;
-    display: flex;
-    gap: 500px;
-   /* background-color: #FB8B8F; */
-    /* fill: rgba(131, 131, 131, 0.45);
-    box-shadow: 0 -14px 60px 0 rgba(255, 255, 255, 0.25) inset;
-    backdrop-filter: blur(40px);
-    clip-path: inset polygon(66.25% 0%, 66.25% 50.25%, 100% 50.25%, 100% 99.78%, 66.25% 100%, 0% 100%, 0% 0% round 20px); */
-    background-image: url(../../Assets/cardbg2.png);
-    /* background-image: url(./../Assets/00.svg); */
-    background-repeat: no-repeat;
-    background-size: contain;
-    /* backdrop-filter: blur(25px); */
-}
-
 .div_temp2{
     width: 40%;
     display: flex;
@@ -25,15 +8,3 @@
     margin: 0 4%;
     /* background-color: #54F1E9; */
 }
-
-.card_marg{
-    margin-top: -14%;
-    z-index: 2;
-    /* display: block; */
-}
-
-.card_marg:hover{
-    margin-top: 40px;
-    /* display: none; */
-}
-

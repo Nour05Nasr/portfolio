@@ -26,6 +26,7 @@
     background: rgba(176, 176, 176, 0.25);
     backdrop-filter: blur(40px);
 }
+
 .hero_temp:hover{
     /* padding: 6% 5%; */
     /* border: 6px solid linear-gradient(0deg, #54F1E9 4.13%, #cd420c 80.23%); */

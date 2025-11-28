@@ -10,7 +10,7 @@ import './CategoryCard.css';
 const CategoryCard = (props) => {
     return ( 
         <>
-        <div class="card_temp2 card_marg">
+        <div class="card_temp2">
             <div class="section_temp">
                 <div class="div_temp2">
                     <H3 title={props.title} />

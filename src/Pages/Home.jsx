@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
+import { SiReact, SiNextdotjs, SiTypescript, SiTailwindcss } from 'react-icons/si';
+import ScrollStack, { ScrollStackItem } from '../Components/Layout/ScrollStack'
+import CardSwap, { Card } from '../Components/Layout/CardSwap';
 import PillNav from '../Components/Layout/PillNav';
 import BubbleMenu from '../Components/Layout/BubbleMenu';
 import GooeyNav from '../Components/Layout/GooeyNav';
@@ -15,8 +18,6 @@ import H2 from '../Components/Common/H2';
 import H3 from '../Components/Common/H3';
 import P from '../Components/Common/P';
 import SpotlightCard from '../Components/Layout/SpotlightCard';
-import ScrollStack, { ScrollStackItem } from '../Components/Layout/ScrollStack';
-import CardSwap, { Card } from '../Components/Layout/CardSwap';
 import showreel from './../Assets/showreel.mp4';
 import LogoLoop from '../Components/Layout/LogoLoop';
 import FigmaLogo from './../Assets/FigmaLogo.png';
@@ -27,7 +28,6 @@ import PSLogo from './../Assets/PSLogo.png';
 import CategoryCard from '../Components/Layout/CategoryCard';
 import CategoryCardFlip from '../Components/Layout/CategoryCardFlip';
 import Input from '../Components/Common/Input'
-import { SiReact, SiNextdotjs, SiTypescript, SiTailwindcss } from 'react-icons/si';
 import CategoryCardContainer from "../Components/Layout/CategoryCardContainer";
 import Footer from '../Components/Layout/Footer';
 import Logos from '../Components/Layout/Logos';
@@ -100,22 +100,30 @@ const techLogos = [
         </section>
 </section>
 
-<div className='stack_card_div'>
-<ScrollStack>
+
+<ScrollStack useWindowScroll={true} >
+      <H1 title='What I can offer ?'/>
   <ScrollStackItem>
-    <h2>Card 1</h2>
-    <p>This is the first card in the stack</p>
+    <CategoryCard title="UI/UX Design & Prototyping" url="/Category/UI_UX_Design"/>
   </ScrollStackItem>
+  
   <ScrollStackItem>
-    <h2>Card 2</h2>
-    <p>This is the second card in the stack</p>
+    <CategoryCard title='Graphic Design & Brand Identity' />
   </ScrollStackItem>
+
   <ScrollStackItem>
-    <h2>Card 3</h2>
-    <p>This is the third card in the stack</p>
+    <CategoryCard title="Web Design & Front-End" url="/Category/Web_Design"/>
+  </ScrollStackItem>
+
+  <ScrollStackItem>
+    <CategoryCard title="Motion Graphics" url="/Category/Motion_Graphics" />
+  </ScrollStackItem>
+
+  <ScrollStackItem>
+    <CategoryCard title="Art Direction" url="/Category/Art_Direction" />
   </ScrollStackItem>
 </ScrollStack>
-</div>
+
 
 {/* <div style={{ height: '100vh', position: 'relative' }}>
   <CardSwap
@@ -147,7 +155,8 @@ const techLogos = [
             <Link to="/AboutMe"><CategoryCardFlip /></Link>
             <Link to="/AboutMe"><CategoryCard /></Link>
         </section> */}
-<section className='top_temp2 relative'>
+
+{/* <section className='relative'>
             <h1 className='cards_h'>What I can offer ?</h1>
         <section class="section2_temp top_temp relative">
             <CategoryCard title="UI/UX Design & Prototyping" url="/Category/UI_UX_Design"/>
@@ -156,7 +165,7 @@ const techLogos = [
             <CategoryCardFlip title="Motion Graphics" url="/Category/Motion_Graphics" />
             <CategoryCard title="Art Direction" url="/Category/Art_Direction" />
         </section>
-</section>
+</section> */}
 
     {/* <div className="App">
       <CategoryCardContainer />
@@ -168,12 +177,9 @@ const techLogos = [
   </section>
   
 
-         {/* <div class="section_temp0">
-             <h1 class="h1_temp q_h2"><span class="q_h1">“</span> I design & develop experiences that make people lives better <span class="q_h1">”</span></h1>
-         </div> */}
 <div className='top_temp2' style={{ width: '100%', height: '600px', position: 'relative' }}>
   <Orb
-    hoverIntensity={0.8}
+    hoverIntensity={1}
     rotateOnHover={true}
     hue={0}
     forceHoverState={false}

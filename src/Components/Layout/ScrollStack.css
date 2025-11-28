@@ -1,13 +1,10 @@
-.body{
-    width: 100%;
-}
 .scroll-stack-scroller {
   position: relative;
   width: 100%;
-  height: 100%;
-  overflow-y: auto;
+  height: auto;  
+  overflow: visible;
   overflow-x: visible;
-  overscroll-behavior: contain;
+overscroll-behavior: auto;
   -webkit-overflow-scrolling: touch;
   scroll-behavior: smooth;
   -webkit-transform: translateZ(0);
@@ -16,7 +13,7 @@
 }
 
 .scroll-stack-inner {
-  padding: 20vh 5rem 50rem;
+  padding: 8vh 5rem 5rem;
   min-height: 100vh;
 }
 
@@ -25,6 +22,7 @@
 }
 
 .scroll-stack-card {
+  pointer-events: none;
   transform-origin: top center;
   will-change: transform, filter;
   backface-visibility: hidden;
@@ -35,16 +33,43 @@
   margin: 30px 0;
   padding: 3rem;
   border-radius: 40px;
-  box-sizing: border-box;
-  /* Improve mobile performance */
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
   position: relative;
-    background-color: rgba(176, 176, 176, 0.4);
-  backdrop-filter: blur(45px);
+  transform: translateZ(0);
+      background: rgba(176, 176, 176, 0.25);
+    backdrop-filter: blur(40px);
 }
+.hero_temp{
+    padding: 5% 4%;
+    width: 62%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6%;
+    gap: 4vh;
+    /* background-color: rgb(206, 206, 206); */
+    border-radius: 40px;
+    background: rgba(176, 176, 176, 0.25);
+    backdrop-filter: blur(40px);
+}
+
+/* Allow buttons, text, inputs to work */
+.scroll-stack-card > * {
+  pointer-events: auto;
+}
+
 
 .scroll-stack-end {
   width: 100%;
   height: 1px;
+}
+
+/* Allow scroll to pass through transformed cards */
+.scroll-stack-card {
+  pointer-events: none;
+}
+
+/* Re-enable interaction only for actual content */
+.scroll-stack-card > * {
+  pointer-events: auto;
 }

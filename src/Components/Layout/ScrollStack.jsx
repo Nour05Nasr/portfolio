@@ -1,5 +1,5 @@
 import { useLayoutEffect, useRef, useCallback } from 'react';
-import Lenis from '@studio-freight/lenis';
+import Lenis from 'lenis';
 import './ScrollStack.css';
 
 export const ScrollStackItem = ({ children, itemClassName = '' }) => (
@@ -301,7 +301,6 @@ const ScrollStack = ({
   ]);
 
   return (
-    <section className='body'>
     <div className={`scroll-stack-scroller ${className}`.trim()} ref={scrollerRef}>
       <div className="scroll-stack-inner">
         {children}
@@ -309,8 +308,8 @@ const ScrollStack = ({
         <div className="scroll-stack-end" />
       </div>
     </div>
-    </section>
   );
 };
 
 export default ScrollStack;
+
