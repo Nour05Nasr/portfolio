@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
+import { Helmet } from "react-helmet";
 import { useParams } from "react-router-dom";
 import GooeyNav from './../Components/Layout/GooeyNav';
 import logo from '../Assets/logo.svg';
@@ -81,6 +82,13 @@ const MyPortfolio = () => {
     timeVariance={300}
     colors={[1, 2, 3, 1, 2, 3, 1, 4]}
   />
+
+        <Helmet>
+        <title>My Portfolio</title>
+        <meta name="description" content="This is the My Portfolio page" />
+        <meta property="og:title" content="My Portfolio" />
+        <meta property="og:image" content="/images/about.png" />
+       </Helmet>
 
      <section className='relative section2_temp'>
       <HeroCard  title='Nour Nasr Creative Design Portfolio' />

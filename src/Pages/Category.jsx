@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
+import { Helmet } from "react-helmet";
 import { useParams } from "react-router-dom";
 import GooeyNav from './../Components/Layout/GooeyNav';
 import logo from '../Assets/logo.svg';
@@ -76,6 +77,13 @@ const Category = () => {
     timeVariance={300}
     colors={[1, 2, 3, 1, 2, 3, 1, 4]}
   />
+
+        <Helmet>
+        <title>Category</title>
+        <meta name="description" content="This is the Category page" />
+        <meta property="og:title" content="Category" />
+        {/* <meta property="og:image" content="/images/about.png" /> */}
+       </Helmet>
 
      <section className='relative section2_temp'>
       <HeroCard  title='UI/UX Design & Prototyping Projects' />

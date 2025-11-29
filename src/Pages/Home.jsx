@@ -32,7 +32,6 @@ import CategoryCardContainer from "../Components/Layout/CategoryCardContainer";
 import Footer from '../Components/Layout/Footer';
 import Logos from '../Components/Layout/Logos';
 import Orb from '../Components/Common/Orb';
-// import Orb from './Orb';
 import './Home.css';
 
 const items = [
@@ -82,7 +81,7 @@ const techLogos = [
         TESTTTTTTTTTTTTTTT
       </SpotlightCard> */}
       <section className='relative section2_temp'>
-      <HeroCard title="our Nasr UI/UX Designer & Creative Art Director" url="/AboutMe" />
+      <HeroCard title="Nour Nasr UI/UX Designer & Creative Art Director" url="/AboutMe" />
       <video className="vid" autostart autoPlay loop src={hero}></video>
       </section>
 

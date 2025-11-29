@@ -55,8 +55,8 @@ const AboutMe = () => {
     colors={[1, 2, 3, 1, 2, 3, 1, 4]}
   />
         <Helmet>
-        <title>About</title>
-        <meta name="description" content="This is the about page" />
+        <title>About Me</title>
+        <meta name="description" content="This is the About Me page" />
         <meta property="og:title" content="About Us" />
         <meta property="og:image" content="/images/about.png" />
        </Helmet>

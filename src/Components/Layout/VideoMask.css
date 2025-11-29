@@ -1,0 +1,19 @@
+.svg-mask-wrapper {
+  width: 100%;
+  height: 100vh;
+  /* background: radial-gradient(circle at top, #1a0030, #05000a); */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.svg-mask {
+  width: 420px;
+  height: 420px;
+}
+
+.masked-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

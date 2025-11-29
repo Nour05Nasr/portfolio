@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './Pages/Home';
 import AboutMe from './Pages/AboutMe';
+import ContactMe from './Pages/ContactMe';
 import Category from './Pages/Category';
 import ProjectDetails from './Pages/ProjectDetails';
 import MyPortfolio from './Pages/MyPortfolio';
@@ -14,6 +15,7 @@ const RoutingApp = () => {
     <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/AboutMe" element={<AboutMe />} />
+        <Route path="/ContactMe" element={<ContactMe />} />
         {/* <Route path="/Category" element={<Category />} />
         <Route path="/ProjectDeails" element={<ProjectDetails />} /> */}
         <Route path="/Category/:id" element={<Category />} />

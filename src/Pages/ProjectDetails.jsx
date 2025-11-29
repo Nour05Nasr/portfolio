@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
+import { Helmet } from "react-helmet";
 import { useParams } from "react-router-dom";
 import GooeyNav from './../Components/Layout/GooeyNav';
 import logo from './../Assets/logo.svg';
@@ -72,6 +73,13 @@ const ProjectDetails = (props) => {
     timeVariance={300}
     colors={[1, 2, 3, 1, 2, 3, 1, 4]}
   />
+
+          <Helmet>
+        <title>Project Details</title>
+        <meta name="description" content="This is the ProjectDetails page" />
+        <meta property="og:title" content="ProjectDetails" />
+        <meta property="og:image" content="/images/about.png" />
+       </Helmet>
 
             {/* <Image img={project1} alt="project" /> */}
 
