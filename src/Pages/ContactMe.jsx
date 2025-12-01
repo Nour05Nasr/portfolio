@@ -64,14 +64,15 @@ const AboutMe = () => {
           <meta property="og:image" content="/images/about.png" />
        </Helmet>
 
+       {/* <VideoMask /> */}
+
        <section className='relative'>
         <H1 title='My Socials' />
         <img className='top_temp2' src={contact} />
        </section>
 
-       <VideoMask />
 
-  <section class="section2_temp top_temp2">
+    <section class="section2_temp top_temp2">
         <H1 title='FAQ'/>
         <FAQ />
     </section>
