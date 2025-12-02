@@ -14,7 +14,7 @@ const faqs = [
         question: "What are your pricing or consultation fees?",
         answer:"Pricing is flexible and depends on the project scope, timeline, and complexity. Nour offers customized quotes after an initial discussion to ensure the solution fits both your goals and budget. Consultations can be requested directly through the contact page."
   },
-  {
+{
     question: " What was your role in collaborative projects?",
     answer:"In collaborative projects, Nour typically leads the creative direction and UI/UX design process, contributing to research, wireframing, prototyping, and final visual design. Strong teamwork, clear communication, and cross-disciplinary coordination are key strengths in group-based work."
   }
