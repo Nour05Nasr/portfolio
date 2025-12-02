@@ -36,8 +36,8 @@ import './Home.css';
 
 const items = [
   { label: "About Me", href: "/AboutMe" },
-  { label: "My Services", href: "/Myservices" },
-  { label: <img src={logo} alt="Logo" className="nav-logo" />, href:"/"},
+  { label: "My Services", href: "*" },
+  { label: <img src={logo} alt="NN Logo" className="nav-logo" />, href:"/"},
   { label: "My Portfolio", href: "/MyPortfolio" },
   { label: "Contact Me", href: "/ContactMe" },
 ];
