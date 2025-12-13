@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 import { Helmet } from "react-helmet";
 import { useParams } from "react-router-dom";
+import { useEffect } from 'react';
+import { supabase } from '../Supabase';
+import { useState } from 'react';
 import GooeyNav from './../Components/Layout/GooeyNav';
 import logo from './../Assets/logo.svg';
 import Button from './../Components/Common/Button';
@@ -32,28 +35,58 @@ const items = [
 
 
 const ProjectDetails = (props) => {
-    let projects ={
-        project1:{
-            title: "ARTMENTO App",
-            content: "This is the content for category 1",
-            projimg: {project1},
-        },
-        project2:{
-            title: "AR Escape Room Web",
-            content: "This is the content for category 2",
-            projimg: {project2},
-        },
-        project3:{
-            title: "ITN TV OS",
-            content: "This is the content for category 3",
-            projimg: {project3},
-        }
-    }
+  const [loading, setLoading] = useState(true);
+  const [projects, setProjects] = useState([{
+      id:"",
+      Title: "",
+      Thumbnail: "",       
+      Path: "",       
+      Cover_img: "",
+      Cover_Title: "",
+      Date: "",       
+      Category: [],       
+      Overview: "",       
+      Process: "",       
+      Images: "",       
 
-      const { id } = useParams();
-      console.log(id);
+  }]);
+  
+      useEffect(() => {
+          async function CallGetAPI(){
+              const res = await supabase.from("Projects").select("*");
+              setProjects(res.data);
+              setLoading(false);
+              // console.log(res.data[0].Title);
+              // console.log(res.data[0].Cover_img);
+              // console.log(res.data[0].Date);
+          }
+          CallGetAPI();
+      },[]);
+
+ 
+    // let projects ={
+    //     project1:{
+    //         title: "ARTMENTO App",
+    //         content: "This is the content for category 1",
+    //         projimg: {project1},
+    //     },
+    //     project2:{
+    //         title: "AR Escape Room Web",
+    //         content: "This is the content for category 2",
+    //         projimg: {project2},
+    //     },
+    //     project3:{
+    //         title: "ITN TV OS",
+    //         content: "This is the content for category 3",
+    //         projimg: {project3},
+    //     }
+    // }
+
+    //   const { id } = useParams();
+    //   console.log(id);
     //   console.log(projects[project1].title);
 
+    if (loading) return <p>Loading...</p>;
     return ( 
                   <div style={{
 //   height: '100vh',
@@ -84,23 +117,25 @@ const ProjectDetails = (props) => {
             {/* <Image img={project1} alt="project" /> */}
 
       <section className='relative section2_temp'>
-      <HeroCard  title='Artmento the AI Art Mentor App' />
-      <img className='vid' src={projHero} alt="project1" />
+      <HeroCard  title= {projects[1].Cover_Title}/>
+      <img className='vid' src={projects[1].Cover_img} alt="" />
       </section>
       
         <section className='relative section2_temp top_temp2'>
-            <img className='proj_img' src={project1} alt="project1" />
+      <img className='proj_img' src={projects[1].Thumbnail} alt="project1" />
       <OvrCard 
       project='Project Overview' 
-      desc='Led the creative direction and participated in the design of a 6 members group project aimed at mentoring and guiding artists through the AI art mentor App with interactive design emphasizing on teamwork, Multidisciplinary and balancing creativity with technical execution.' />
+      desc={projects[1].Overview} />
 
             <section className='section_temp0'>
             <div className='section2_temp'>
               <H1 title='Categories' />
+              
                 <div className='section_temp0'>
-                    <Filter title='UI/UX Design'/>
-                    <Filter title='Art Direction'/>
-                </div>
+                  {projects[1].Category.map((c)=>{
+                   return <Filter title={c}/>
+        })}
+                        </div>
               </div>
 
             <div className='section2_temp'>
@@ -115,11 +150,20 @@ const ProjectDetails = (props) => {
 
       <OvrCard
       project='Design Process' 
-      desc='Led the creative direction and participated in the design of a 6 members group project aimed at mentoring and guiding artists through the AI art mentor App with interactive design emphasizing on teamwork, Multidisciplinary and balancing creativity with technical execution.' />
-               <img className='proj_img' src={process} alt="project1" />
+      desc={projects[1].Process}/>
+               {/* <img className='proj_img' src={process} alt="project1" /> */}
+                {
+          projects[1].Images.map((c)=>{
+            console.log(c); 
+            return <div>
+              
+              <img src={c.url} alt={c.alt}/>
+              </div>
+          })
+        }
         </section>
 
-          <Footer />
+        <Footer />
 </div>
      );
 }

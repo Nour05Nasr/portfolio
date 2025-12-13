@@ -90,6 +90,7 @@ const MyPortfolio = () => {
         <meta property="og:image" content="/images/about.png" />
        </Helmet>
 
+3.
      <section className='relative section2_temp'>
       <HeroCard  title='Nour Nasr Creative Design Portfolio' />
       <video className="vid" autostart autoPlay loop src={showreel}></video>
