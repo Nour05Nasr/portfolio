@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
+import { supabase } from '../../Supabase';
 import Input from '../Common/Input'
 import H1 from '../Common/H1';
 import H3 from '../Common/H3';
@@ -9,6 +10,15 @@ import {Link} from 'react-router-dom';
 import './Footer.css';
 
 const Footer = () => {
+    const [Name,setName] = useState("");
+    const [Number,setNumber] = useState("");
+    const [Email,setEmail] = useState("");
+    const [Msg,setMsg] = useState("");
+
+    async function sendMsg(){
+        const  res = await supabase.from("Messages").insert({"FullName":Name});
+    }
+
     return ( <>
      <section class="connect_temp">
                 <section class="section2_temp top_temp2">
@@ -18,13 +28,20 @@ const Footer = () => {
                     <P title='let’s connect and build your next project together ;)' />
                     </div>
                     <div class="section2_temp top_temp2">
-                        <div class="section_temp0">
-                          <Input title='Full Name'/>
+                        <form class="section_temp0" onSubmit={sendMsg}> 
+                        <input class="input" onChange={(i)=>{setName(i.target.value)}} placeholder="Full Name"  type="text" />
+                        <input class="input" onChange={(i)=>{setNumber(i.target.value)}} placeholder="E-mail"  type="text" />
+                        <input class="input" onChange={(i)=>{setEmail(i.target.value)}} placeholder="Number"  type="text" />
+                        <input class="input" onChange={(i)=>{setMsg(i.target.value)}} placeholder="Message"  type="text" />
+                        {/* <Button onClick={sendMsg}  title="Send" /> */}
+                          {/* <Input  title='Your Full Name'/>
                           <Input title='Your E-mail'/>
                           <Input title='Your Number'/>
-                          <Input title='Your Message'/>
-                        </div>
-                        <Link className='top_temp2' to="/ContactMe"><Button title='Let;s Connect' /></Link>
+                          <Input title='Your Message'/> */}
+                          <button className='cta_temp_1'>Send</button>
+                        </form>
+                        {/* <button className='cta_temp_1' onClick={()=>{console.log(Name)}}>send</button> */}
+                        {/* <Link className='top_temp2' to="/ContactMe"><Button title='Let;s Connect' /></Link> */}
                     </div>
                 </section>
         

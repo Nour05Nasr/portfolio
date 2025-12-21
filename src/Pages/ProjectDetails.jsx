@@ -1,10 +1,8 @@
-import React, { Component } from 'react';
+import React, { Component, useEffect, useState } from 'react';
 import {Link} from 'react-router-dom';
 import { Helmet } from "react-helmet";
 import { useParams } from "react-router-dom";
-import { useEffect } from 'react';
 import { supabase } from '../Supabase';
-import { useState } from 'react';
 import GooeyNav from './../Components/Layout/GooeyNav';
 import logo from './../Assets/logo.svg';
 import Button from './../Components/Common/Button';
@@ -27,12 +25,11 @@ import './ProjectDetails.css';
 
 const items = [
   { label: "About Me", href: "/AboutMe" },
-  { label: "My Services", href: "/Myservices" },
-  { label: <img src={logo} alt="Logo" className="nav-logo" />, href:"/"},
+  { label: "My Services", href: "*" },
+  { label: <img src={logo} alt="NN Logo" className="nav-logo" />, href:"/"},
   { label: "My Portfolio", href: "/MyPortfolio" },
   { label: "Contact Me", href: "/ContactMe" },
 ];
-
 
 const ProjectDetails = (props) => {
   const [loading, setLoading] = useState(true);
@@ -62,29 +59,6 @@ const ProjectDetails = (props) => {
           }
           CallGetAPI();
       },[]);
-
- 
-    // let projects ={
-    //     project1:{
-    //         title: "ARTMENTO App",
-    //         content: "This is the content for category 1",
-    //         projimg: {project1},
-    //     },
-    //     project2:{
-    //         title: "AR Escape Room Web",
-    //         content: "This is the content for category 2",
-    //         projimg: {project2},
-    //     },
-    //     project3:{
-    //         title: "ITN TV OS",
-    //         content: "This is the content for category 3",
-    //         projimg: {project3},
-    //     }
-    // }
-
-    //   const { id } = useParams();
-    //   console.log(id);
-    //   console.log(projects[project1].title);
 
     if (loading) return <p>Loading...</p>;
     return ( 
@@ -122,7 +96,7 @@ const ProjectDetails = (props) => {
       </section>
       
         <section className='relative section2_temp top_temp2'>
-      <img className='proj_img' src={projects[1].Thumbnail} alt="project1" />
+      <img className='proj_img' src={projects[1].ThumbNail} alt="project1" />
       <OvrCard 
       project='Project Overview' 
       desc={projects[1].Overview} />
@@ -132,7 +106,8 @@ const ProjectDetails = (props) => {
               <H1 title='Categories' />
               
                 <div className='section_temp0'>
-                  {projects[1].Category.map((c)=>{
+                  {
+                  projects[1].Category.map((c)=>{
                    return <Filter title={c}/>
         })}
                         </div>

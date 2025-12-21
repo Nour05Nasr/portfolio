@@ -12,6 +12,37 @@ border-radius: 11000px 11000px 0 0;
 background: rgba(155, 155, 155, 0.25);
 backdrop-filter: blur(80px);
 }
+.input{
+    /* width: 200px; */
+    /* height: 60px; */
+    padding: 0.5% 0 0.5% 1%;
+    font-family: var(--font_2);
+    font-size: 16px;
+    color: #fff;
+    border-radius: 14px;
+    border: 2px solid var(--main_color);
+    /* background-color: #fff; */
+}
+
+.cta_temp_1{  
+    /* width: 44vw; */
+    /* height: 10vh; */
+    padding: 14px 4%;
+    border-radius: 40px;
+    border: 3px solid rgba(176, 176, 176, 0.20);
+    background: rgba(176, 176, 176, 0.20);
+    box-shadow: 6px -6px 8px 0 rgba(0, 0, 0, 0.25) inset, -6px 6px 8px 0 rgba(255, 255, 255, 0.25) inset;
+    color: var(--main_color);
+    font-family: var(--font_2);
+    font-size: var(--p);
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 1;
+}
 
 .footer_row{
     width: 100%;

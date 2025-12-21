@@ -1,7 +1,8 @@
-import React, { Component } from 'react';
+import React, { Component, useEffect, useState } from 'react';
 import {Link} from 'react-router-dom';
 import { Helmet } from "react-helmet";
 import { useParams } from "react-router-dom";
+import { supabase } from '../Supabase';
 import GooeyNav from './../Components/Layout/GooeyNav';
 import logo from '../Assets/logo.svg';
 import HeroCard from './../Components/Layout/HeroCard';
@@ -18,46 +19,60 @@ import Footer from '../Components/Layout/Footer';
 import './Category.css';
 
  const items = [
-  { label: "About Me", href: "#" },
-  { label: "My Services", href: "#" },
-  { label: <img src={logo} alt="Logo" className="nav-logo" />, href: "#" },
-  { label: "My Portfolio", href: "#" },
-  { label: "Contact Me", href: "#" },
-];
+   { label: "About Me", href: "/AboutMe" },
+   { label: "My Services", href: "*" },
+   { label: <img src={logo} alt="NN Logo" className="nav-logo" />, href:"/"},
+   { label: "My Portfolio", href: "/MyPortfolio" },
+   { label: "Contact Me", href: "/ContactMe" },
+ ];
+ 
 
-const Category = () => {
-    let categories ={
-        category1:{
-            title: "UI/UX Design & Prototyping",
-            content: "This is the content for category 1",
-            heroimg: {ui_ux2},
-        },
-        category2:{
-            title: "Graphic Design & Brand Identity",
-            content: "This is the content for category 2",
-            heroimg: {logo},
-        },
-        category3:{
-            title: "Web Design & Front-End",
-            content: "This is the content for category 3",
-            heroimg: {logo},
-        },
-        category4:{
-            title: "Motion Graphics",
-            content: "This is the content for category 4",
-            heroimg: {logo},
-        },
-        category5:{
-            title: "Art Direction",
-            content: "This is the content for category 5",
-            heroimg: {logo},
-        }
-    }
+const Category = (props) => {
+    const [loading, setLoading] = useState(true);
+    const [Categories, setcategories] = useState([]);
 
-  const { id } = useParams();
-  console.log(id);
-//   console.log(categories[category1].title);
+    
+useEffect(() => {
+  async function fetchData() {
+    const { data } = await supabase.from("Categories").select("*");
+    setcategories(data || []);
+    setLoading(false);
+    console.log(data)
+  }
+  fetchData();
+}, []);
 
+    // let categories ={
+    //     category1:{
+    //         title: "UI/UX Design & Prototyping",
+    //         content: "This is the content for category 1",
+    //         heroimg: {ui_ux2},
+    //     },
+    //     category2:{
+    //         title: "Graphic Design & Brand Identity",
+    //         content: "This is the content for category 2",
+    //         heroimg: {logo},
+    //     },
+    //     category3:{
+    //         title: "Web Design & Front-End",
+    //         content: "This is the content for category 3",
+    //         heroimg: {logo},
+    //     },
+    //     category4:{
+    //         title: "Motion Graphics",
+    //         content: "This is the content for category 4",
+    //         heroimg: {logo},
+    //     },
+    //     category5:{
+    //         title: "Art Direction",
+    //         content: "This is the content for category 5",
+    //         heroimg: {logo},
+    //     }
+    // }
+
+const { id } = useParams();
+const category = Categories.find(cat => cat.id == id);
+if (loading || !category) return <p>Loading...</p>;
     return ( 
           <div style={{
 //   height: '100vh',
@@ -86,8 +101,8 @@ const Category = () => {
        </Helmet>
 
      <section className='relative section2_temp'>
-      <HeroCard  title='UI/UX Design & Prototyping Projects' />
-      <img className="vid" src={ui_ux2}></img>
+<HeroCard title={Categories[1].Title} />
+<img className='vid' src={Categories[1].Hero_img} />
       </section>
 
             <div className='section2_temp'>

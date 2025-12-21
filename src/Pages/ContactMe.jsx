@@ -27,16 +27,13 @@ import VideoMask from '../Components/Layout/VideoMask';
 import './AboutMe.css';
 //2222
 
-
 const items = [
-  { label: "About Me", href: "/AboutMe" },  
-  { label: "My Services", href: "/Myservices" },
-  { label: <img src={logo} alt="Logo" className="nav-logo" />, href:"/"},
+  { label: "About Me", href: "/AboutMe" },
+  { label: "My Services", href: "*" },
+  { label: <img src={logo} alt="NN Logo" className="nav-logo" />, href:"/"},
   { label: "My Portfolio", href: "/MyPortfolio" },
   { label: "Contact Me", href: "/ContactMe" },
-];  
-
-
+];
 
 const AboutMe = () => {
     return ( 
