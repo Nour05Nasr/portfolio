@@ -7,7 +7,7 @@ import './AboutCard.css';
 
 const AboutCard = (props) => {
     return ( <>
-        <section className='relative about_card section_temp'>
+        <section className='relative about_card section_temp '>
             <img className='img0' src={props.img} alt="certificate" />
             <div className=' section2_temp'>
               <H1 title={props.title} />

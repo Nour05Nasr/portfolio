@@ -17,6 +17,7 @@ import OvrCard from './../Components/Common/OvrCard';
 import projHero from './../Assets/projHero.png';
 import certf from './../Assets/certf.png';
 import exhbt from './../Assets/exhbt.png';
+import ProjectCard from '../Components/Layout/ProjectCard';
 import AboutCard from '../Components/Layout/AboutCard';
 import AboutCard2 from '../Components/Layout/AboutCard2';
 import Logos from '../Components/Layout/Logos';
@@ -71,10 +72,11 @@ const AboutMe = () => {
 </section>
 
 <section className='relative top_temp2 section2_temp'>
+  {/* <img src={certf} /> */}
    <AboutCard 
    img={certf}
       title='My certificates' 
-      desc='I was accepted in to the ALX course AI Career Essentials in which helped in deepening my understanding of AI and its tools, and how they can be harnessed to optimize my workflow.' />
+      desc='I gained AI Career Essentials ALX course in which helped in deepening my understanding of AI and its tools, and how they can be harnessed to optimize my workflow.' />
    
    <AboutCard2 
       title='My certificates' 

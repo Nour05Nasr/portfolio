@@ -91,15 +91,15 @@ const ProjectDetails = (props) => {
             {/* <Image img={project1} alt="project" /> */}
 
       <section className='relative section2_temp'>
-      <HeroCard  title= {projects[1].Cover_Title}/>
-      <img className='vid' src={projects[1].Cover_img} alt="" />
+      <HeroCard  title= {projects[2].Cover_Title}/>
+      <img className='vid' src={projects[2].Cover_img} alt="" />
       </section>
       
         <section className='relative section2_temp top_temp2'>
-      <img className='proj_img' src={projects[1].ThumbNail} alt="project1" />
+      <img className='proj_img' src={projects[2].ThumbNail} alt="project1" />
       <OvrCard 
       project='Project Overview' 
-      desc={projects[1].Overview} />
+      desc={projects[2].Overview} />
 
             <section className='section_temp0'>
             <div className='section2_temp'>
@@ -107,7 +107,7 @@ const ProjectDetails = (props) => {
               
                 <div className='section_temp0'>
                   {
-                  projects[1].Category.map((c)=>{
+                  projects[0].Category.map((c)=>{
                    return <Filter title={c}/>
         })}
                         </div>
@@ -125,10 +125,10 @@ const ProjectDetails = (props) => {
 
       <OvrCard
       project='Design Process' 
-      desc={projects[1].Process}/>
+      desc={projects[2].Process}/>
                {/* <img className='proj_img' src={process} alt="project1" /> */}
                 {
-          projects[1].Images.map((c)=>{
+          projects[2].Images.map((c)=>{
             console.log(c); 
             return <div>
               
