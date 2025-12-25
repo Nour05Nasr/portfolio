@@ -71,8 +71,7 @@ useEffect(() => {
     // }
 
 const { id } = useParams();
-const category = Categories.find(cat => cat.id == id);
-if (loading || !category) return <p>Loading...</p>;
+    if (loading) return <p>Loading...</p>;
     return ( 
           <div style={{
 //   height: '100vh',
@@ -101,8 +100,8 @@ if (loading || !category) return <p>Loading...</p>;
        </Helmet>
 
      <section className='relative section2_temp'>
-<HeroCard title={Categories[1].Title} />
-<img className='vid' src={Categories[1].Hero_img} />
+<HeroCard title={Categories[0].Title} />
+<img className='vid' src={Categories[0].Hero_img} />
       </section>
 
             <div className='section2_temp'>

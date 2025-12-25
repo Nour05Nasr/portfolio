@@ -9,7 +9,7 @@
     align-items: center;
     justify-content: center;
     gap: 4vh;
-    /* margin: -3% 0 0 0; */
+    padding: 80px;
     background-image: url(../../Assets/project_card1.svg);
     background-repeat: no-repeat;
     background-size: contain;

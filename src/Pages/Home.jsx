@@ -107,7 +107,7 @@ const techLogos = [
   </ScrollStackItem>
   
   <ScrollStackItem>
-    <CategoryCard title='Graphic Design & Brand Identity' />
+    <CategoryCard title='Graphic Design & Brand Identity' url="/Category/Graphic_Design"/>
   </ScrollStackItem>
 
   <ScrollStackItem>

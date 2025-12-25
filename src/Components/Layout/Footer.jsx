@@ -16,7 +16,7 @@ const Footer = () => {
     const [Msg,setMsg] = useState("");
 
     async function sendMsg(){
-        const  res = await supabase.from("Messages").insert({"FullName":Name});
+        const  res = await supabase.from("Messages").insert({"FullName":Name, "Phone":Number, "Email":Email, "Message":Msg})
     }
 
     return ( <>
@@ -27,22 +27,28 @@ const Footer = () => {
                     <P title='Do you need a new website, app, or complete brand identity?' />
                     <P title='let’s connect and build your next project together ;)' />
                     </div>
-                    <div class="section2_temp top_temp2">
-                        <form class="section_temp0" onSubmit={sendMsg}> 
+                    <div className='section2_temp top_temp2'>
+                        <form className='section2_temp' onSubmit={sendMsg}> 
+                            <div className='section_temp0 bottom'>
                         <input class="input" onChange={(i)=>{setName(i.target.value)}} placeholder="Full Name"  type="text" />
-                        <input class="input" onChange={(i)=>{setNumber(i.target.value)}} placeholder="E-mail"  type="text" />
-                        <input class="input" onChange={(i)=>{setEmail(i.target.value)}} placeholder="Number"  type="text" />
+                        <input class="input" onChange={(i)=>{setNumber(i.target.value)}} placeholder="Number"  type="number" />
+                        <input class="input" onChange={(i)=>{setEmail(i.target.value)}} placeholder="E-mail"  type="text" />
                         <input class="input" onChange={(i)=>{setMsg(i.target.value)}} placeholder="Message"  type="text" />
+                            </div>
                         {/* <Button onClick={sendMsg}  title="Send" /> */}
                           {/* <Input  title='Your Full Name'/>
                           <Input title='Your E-mail'/>
                           <Input title='Your Number'/>
                           <Input title='Your Message'/> */}
-                          <button className='cta_temp_1'>Send</button>
+                          <Button className='cta_temp_1' title="Let,s Connect" />
+                          {/* <td>
+                           <Link className='top_temp2' to="/ContactMe">
+                               <Button title='Let,s Connect' />
+                           </Link>
+                          </td> */}
                         </form>
-                        {/* <button className='cta_temp_1' onClick={()=>{console.log(Name)}}>send</button> */}
-                        {/* <Link className='top_temp2' to="/ContactMe"><Button title='Let;s Connect' /></Link> */}
                     </div>
+                        {/* <button className='cta_temp_1' onClick={()=>{console.log(Name)}}>send</button> */}
                 </section>
         
                 <footer class="footer-section">
